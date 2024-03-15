@@ -16,14 +16,13 @@ function onFormSubmit(event) {
     message,
   };
 
-  console.log(data);
-
-  if (form.elements.email.value === '' || form.elements.message.value === '') {
+  if (email !== '' && message !== '') {
+    console.log(data);
+    form.reset();
+    localStorage.removeItem(keyLS);
+  } else {
     alert('Fill in all fields of the form');
   }
-  console.log(data);
-  form.reset();
-  localStorage.removeItem(keyLS);
 }
 
 function onFormInput() {

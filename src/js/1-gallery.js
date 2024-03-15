@@ -80,7 +80,7 @@ const imagesGallery = images
 
 containerImg.insertAdjacentHTML('beforeend', imagesGallery);
 
-const lightbox = new SimpleLightbox('.gallery-link', {
+const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
